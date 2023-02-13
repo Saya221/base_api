@@ -1,0 +1,7 @@
+# Changed default format
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# Disabled
+Style/Documentation:
+  Enabled: false
