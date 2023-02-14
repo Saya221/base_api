@@ -1,7 +1,18 @@
+# Ignored files or directories
+AllCops:
+  Exclude:
+    - "bin/*"
+    - "config/**/*"
+    - "db/**/*"
+
 # Changed default format
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
 # Disabled
 Style/Documentation:
+  Enabled: false
+Naming/AccessorMethodName:
+  Enabled: false
+Lint/MissingSuper:
   Enabled: false
