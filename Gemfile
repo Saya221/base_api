@@ -10,6 +10,7 @@ gem "bootsnap", require: false
 gem "config"
 gem "figaro"
 gem "mysql2"
+gem "pagy"
 gem "puma"
 gem "rack-cors"
 gem "rails", "~> 7.0.4"
