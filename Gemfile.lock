@@ -168,6 +168,8 @@ GEM
       racc (~> 1.4)
     pagy (6.0.1)
     parallel (1.22.1)
+    paranoia (2.6.1)
+      activerecord (>= 5.1, < 7.1)
     parser (3.2.1.0)
       ast (~> 2.4.1)
     pry (0.14.2)
@@ -280,6 +282,7 @@ DEPENDENCIES
   listen
   mysql2
   pagy
+  paranoia
   pry-rails
   puma
   rack-cors
