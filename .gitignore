@@ -1,9 +1,6 @@
 /log/*
 !/log/.keep
 
-/storage/*
-!/storage/.keep
-
 tmp
 coverage
 
