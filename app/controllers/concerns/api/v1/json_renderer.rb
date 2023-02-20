@@ -57,7 +57,7 @@ module Api
       protected
 
       included do
-        def render_jsonapi(object, options = {})
+        def render_json(object, options = {})
           success = options.fetch :success, true
           meta = options.fetch :meta, {}
           status = options.fetch :status, :ok

@@ -16,3 +16,5 @@ Naming/AccessorMethodName:
   Enabled: false
 Lint/MissingSuper:
   Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false

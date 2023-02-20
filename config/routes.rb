@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   namespace :api, format: :json do
     namespace :v1 do
+
+      namespace :admin do
+        resources :users, only: %i(show)
+      end
+
     end
   end
 end
