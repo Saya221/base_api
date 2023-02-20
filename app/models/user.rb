@@ -2,4 +2,6 @@
 
 class User < ApplicationRecord
   acts_as_paranoid
+
+  enum role: %i[admin staff customer]
 end
