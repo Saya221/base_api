@@ -2,6 +2,7 @@
 
 require "spec_helper"
 require "simplecov"
+require "shoulda/matchers"
 SimpleCov.start do
   add_filter ["/config/", "/spec/"]
   enable_coverage :branch
@@ -24,4 +25,6 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
   config.include FactoryBot::Syntax::Methods
+  config.include Shoulda::Matchers::ActiveModel, type: :model
+  config.include Shoulda::Matchers::ActiveRecord, type: :model
 end

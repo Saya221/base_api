@@ -6,6 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.0.0"
 
 gem "active_model_serializers"
+gem "bcrypt"
 gem "bootsnap", require: false
 gem "config"
 gem "figaro"
@@ -23,6 +24,7 @@ group :development, :test do
   gem "pry-rails"
   gem "rspec-rails"
   gem "rubocop", require: false
+  gem "shoulda-matchers"
   gem "simplecov"
 end
 
