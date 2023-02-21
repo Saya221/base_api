@@ -7,24 +7,24 @@ RSpec.describe HashSerializer do
 
   describe "#to_hash" do
     context "root eq true" do
-      let(:result) { HashSerializer.new(hash, root: true).to_hash }
+      let(:response_data) { described_class.new(hash, root: true).to_hash }
 
-      it { expect(result).to eq({ data: hash }) }
+      it { expect(response_data).to eq({ data: hash }) }
     end
 
     context "root eq custom key" do
-      let(:custom_sym) { HashSerializer.new(hash, root: :custom).to_hash }
-      let(:custom_int) { HashSerializer.new(hash, root: 1).to_hash }
-      let(:result) { { custom: hash } }
+      let(:custom_sym) { described_class.new(hash, root: :custom).to_hash }
+      let(:custom_int) { described_class.new(hash, root: 1).to_hash }
+      let(:response_data) { { custom: hash } }
 
-      it { expect(custom_sym).to eq result }
+      it { expect(custom_sym).to eq response_data }
       it { expect(custom_int).to eq({ nil => hash }) }
     end
 
     context "dont have args root" do
-      let(:result) { HashSerializer.new(hash).to_hash }
+      let(:response_data) { described_class.new(hash).to_hash }
 
-      it { expect(result).to eq hash }
+      it { expect(response_data).to eq hash }
     end
   end
 end

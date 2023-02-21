@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_16_100654) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_21_204721) do
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "email", null: false
     t.integer "role"
     t.integer "age"
-    t.integer "phone_number"
+    t.string "phone_number"
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -18,3 +18,8 @@ Lint/MissingSuper:
   Enabled: false
 Style/ClassAndModuleChildren:
   Enabled: false
+
+# Disabled for RSpec
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
