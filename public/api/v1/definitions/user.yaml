@@ -1,0 +1,16 @@
+root:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    name:
+      type: string
+      example: user's name
+    phone_number:
+      type: string
+      example: "0123456789"
+    role:
+      type: string
+      enum: ["admin", "staff", "customer"]
+      example: admin

@@ -1,0 +1,45 @@
+show:
+  get:
+    sumarry: Get user's basic information
+    tags:
+      - users
+    description: Use this API to get user's basic information
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    responses:
+      200:
+        description: Get user's basic information successfully
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: true
+                data:
+                  type: object
+                  properties:
+                    user:
+                      $ref: "../../definitions/user.yaml#/root"
+                meta:
+                  type: object
+      404:
+        description: Not found
+        content:
+          application/json:
+            schema:
+              $ref: "../../shared/common.yaml#/errors_object"
+            examples:
+              when user is not found:
+                value:
+                  success: false
+                  errors:
+                    - resource: user
+                      field:
+                      code: 1051
+                      message: Resourse is not found.

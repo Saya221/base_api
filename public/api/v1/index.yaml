@@ -4,8 +4,10 @@ info:
   title: API V1
   version: v1
 paths:
+  /api/v1/admin/users/{id}:
+    $ref: paths/admin/users.yaml#show
 servers:
-  - url: https://{defaultHost}
+  - url: http://{defaultHost}
     variables:
       defaultHost:
-        default: www.example.com
+        default: localhost:3000

@@ -3,6 +3,7 @@
 require "spec_helper"
 require "simplecov"
 SimpleCov.start do
+  add_filter ["/config/", "/spec/"]
   enable_coverage :branch
 end
 
@@ -22,4 +23,5 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
+  config.include FactoryBot::Syntax::Methods
 end
