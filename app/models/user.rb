@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   include BCrypt
 
+  has_many :user_sessions
+
   enum role: %i[admin staff customer]
 
   validates :name, length: { in: 1..256 }
