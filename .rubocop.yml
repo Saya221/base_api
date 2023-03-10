@@ -23,3 +23,4 @@ Style/ClassAndModuleChildren:
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*"
+    - "app/controllers/concerns/api/v1/rescue_exceptions.rb"

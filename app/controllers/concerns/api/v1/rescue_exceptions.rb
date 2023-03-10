@@ -5,7 +5,7 @@ module Api
     module RescueExceptions
       extend ActiveSupport::Concern
 
-      included do # rubocop:disable Metrics/BlockLength
+      included do
         rescue_from ActionController::ParameterMissing do |_error|
           render_invalid_params_response
         end
