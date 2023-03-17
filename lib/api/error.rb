@@ -99,5 +99,17 @@ module Api
         ActionNotAllowedSerializer.new(error).serialize
       end
     end
+
+    class UnauthorizedRequest < BaseError
+      attr_reader :error
+
+      def initialize(error)
+        @error = error
+      end
+
+      def to_hash
+        UnauthorizedRequestSerializer.new(error).serialize
+      end
+    end
   end
 end

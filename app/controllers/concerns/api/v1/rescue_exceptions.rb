@@ -24,6 +24,7 @@ module Api
         )
         rescue_from ActionController::RoutingError, with: :render_routing_error_response
         rescue_from Api::Error::ActionNotAllowed, with: :render_action_not_allowed_response
+        rescue_from Api::Error::UnauthorizedRequest, with: :render_unauthorized_request_response
 
         protected
 
@@ -56,6 +57,10 @@ module Api
 
         def render_action_not_allowed_response(exception, status: :forbidden)
           render json: Api::Error::ActionNotAllowed.new(exception).to_hash, status: status
+        end
+
+        def render_unauthorized_request_response(exception, status: :unauthorized)
+          render json: Api::Error::UnauthorizedRequest.new(exception).to_hash, status: status
         end
       end
     end
