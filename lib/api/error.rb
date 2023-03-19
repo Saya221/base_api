@@ -4,9 +4,9 @@ module Api
   class BaseError < StandardError
     attr_reader :code, :message
 
-    def initialize(code: nil, message: nil)
-      @code = code
-      @message = message
+    def initialize error = {}
+      @code = error[:code]
+      @message = error[:message]
     end
 
     def serialize

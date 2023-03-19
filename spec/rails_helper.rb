@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
+require "methods_helper"
 require "spec_helper"
-require "simplecov"
 require "shoulda/matchers"
+require "simplecov"
 SimpleCov.start do
   add_filter ["/config/", "/spec/"]
   enable_coverage :branch
@@ -27,4 +28,5 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.include Shoulda::Matchers::ActiveModel, type: :model
   config.include Shoulda::Matchers::ActiveRecord, type: :model
+  config.include MethodsHelper
 end

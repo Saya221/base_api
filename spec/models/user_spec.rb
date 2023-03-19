@@ -3,6 +3,10 @@
 require "rails_helper"
 
 RSpec.describe User, type: :model do
+  describe "relationships" do
+    it { is_expected.to have_many(:user_sessions) }
+  end
+
   describe "validations" do
     it { is_expected.to validate_length_of(:name).is_at_least(1).is_at_most(256) }
     it { is_expected.to validate_presence_of(:password_hash) }

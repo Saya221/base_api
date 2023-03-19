@@ -3,7 +3,6 @@
 require "rails_helper"
 
 RSpec.describe Api::V1::Admin::UsersController do
-  let(:response_data) { JSON.parse response.body, symbolize_names: true }
   let(:user) { create(:user) }
 
   describe "GET #show" do
