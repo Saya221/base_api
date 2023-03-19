@@ -2,6 +2,8 @@
 
 class Api::V1::SessionsController < Api::V1::BaseController
   def login
+    raise ActionController::ParameterMissing, nil unless params[:user]
+
     processing_request
     @current_time = Time.current.to_i
     @access_token =
@@ -21,7 +23,7 @@ class Api::V1::SessionsController < Api::V1::BaseController
     raise Api::Error::UnauthorizedRequest, nil unless current_user && correct_password?
 
     @current_session = current_user.user_sessions.create! login_ip: request.ip,
-                                                          device: request.headers["User-Agent"]
+                                                          browser: request.headers["User-Agent"]
   end
 
   def correct_password?

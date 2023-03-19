@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_14_093223) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_19_045655) do
   create_table "user_sessions", charset: "utf8mb4", force: :cascade do |t|
     t.string "session_token"
     t.string "login_ip"
-    t.string "device"
+    t.string "browser"
     t.bigint "user_id"
     t.datetime "deleted_at"
     t.datetime "created_at", null: false

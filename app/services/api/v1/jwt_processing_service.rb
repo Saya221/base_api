@@ -19,8 +19,8 @@ class Api::V1::JwtProcessingService < Api::V1::BaseService
     {
       user_id: current_user.id,
       session_token: current_session.session_token,
-      iat: current_time.to_i,
-      exp: Settings.jwt.expiration_time
+      iat: current_time,
+      exp: current_time + Settings.jwt.expiration_time
     }
   end
 end
