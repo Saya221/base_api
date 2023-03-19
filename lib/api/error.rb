@@ -4,7 +4,7 @@ module Api
   class BaseError < StandardError
     attr_reader :code, :message
 
-    def initialize error = {}
+    def initialize(error = {})
       @code = error[:code]
       @message = error[:message]
     end
