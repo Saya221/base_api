@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
       post :login, to: "sessions#login"
 
+      get :ping, to: "health_checks#ping"
     end
   end
 end

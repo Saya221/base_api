@@ -11,6 +11,10 @@ paths:
   # Admin/User
   /api/v1/admin/users/{id}:
     $ref: paths/admin/users.yaml#show
+
+  # HealthChecks
+  /api/v1/ping:
+    $ref: paths/health_checks.yaml#ping
 servers:
   - url: http://{defaultHost}
     variables:
