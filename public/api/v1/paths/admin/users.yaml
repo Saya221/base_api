@@ -2,7 +2,7 @@ show:
   get:
     sumarry: Get user's basic information
     tags:
-      - users
+      - Admin/User
     description: Use this API to get user's basic information
     parameters:
       - name: id

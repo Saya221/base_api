@@ -27,7 +27,7 @@ class Api::V1::SessionsController < Api::V1::BaseController
   end
 
   def correct_password?
-    current_user&.password&.is_password? params[:user][:password]
+    current_user.password.is_password? params[:user][:password]
   end
 
   def token_info
